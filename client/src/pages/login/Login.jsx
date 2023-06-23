@@ -30,7 +30,7 @@ const Login = () => {
                 <div className="wrapper">
                     <img
                         className="logo"
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"
+                        src="https://cdn.jsdelivr.net/gh/Th3Wall/assets-cdn/Fakeflix/Fakeflix_logo.png"
                         alt=""
                     />
                 </div>
@@ -42,7 +42,7 @@ const Login = () => {
                     <input type="password" placeholder="password" onChange={(e)=>setPassword(e.target.value)}/>
                     <button className="loginButton" onClick={handleLogin}>Sign In</button>
                     <span>
-                        New to Netflix?<b>Sign up now.</b>
+                        New to Netflix?<b> Sign up now.</b>
                     </span>
                     <small>
                         This page is protected by Google reCAPTCHA to ensure

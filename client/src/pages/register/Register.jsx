@@ -18,20 +18,14 @@ const Register = () => {
     };
     const handleFinish = async (e) => {
         e.preventDefault();
-        console.log(usernameRef.current.value);
-
         setPassword(passwordRef.current.value);
         setUsername(usernameRef.current.value);
         try {
-            await axios.post('auth/register', { email, username, password });
+            await axios.post('auth/register', { email, username, password });   
             navigate('/login');
         } catch (error) {
             console.log(error);
         }
-    };
-
-    const handleClick = () => {
-        console.log('first');
     };
 
     return (
@@ -88,7 +82,7 @@ const Register = () => {
                     </form>
                 )}
                 <Link to="/login">
-                        <button className="loginButton" onClick={handleClick}>
+                        <button className="loginButton">
                             Sign In
                         </button>
                     </Link>

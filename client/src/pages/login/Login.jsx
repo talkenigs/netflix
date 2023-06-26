@@ -10,16 +10,7 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const { dispatch } = useContext(AuthContext)
-
-    const emailRef = useRef();
-    const passwordRef = useRef();
-
-    const handleStart = () => {
-        setEmail(emailRef.current.value);
-    };
-    const handleFinish = () => {
-        setPassword(passwordRef.current.value);
-    };
+    const { error } = useContext(AuthContext);
 
     const handleLogin = (e) => {
         e.preventDefault()
@@ -43,7 +34,7 @@ const Login = () => {
                     <input type="email" placeholder="Email or phone number" onChange={(e) => setEmail(e.target.value)} />
                     <input type="password" placeholder="password" onChange={(e) => setPassword(e.target.value)} />
                     <button className="loginButton" onClick={handleLogin}>Sign In</button>
-
+                   { error ? ( <span style={{color: 'red'}}> Wrong email or password </span> ) : ('')} 
                     <span>
                         New to Netflix? <Link to="/register"><b> Sign up now.</b></Link>
                     </span>

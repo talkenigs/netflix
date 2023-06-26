@@ -21,7 +21,9 @@ const ListItem = ({ index, item }) => {
             try {
                 const res = await axios.get('movies/find/' + item, {
                     headers: {
-                        token: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNTk4OGU0ODQ1NjFjMDQ0ZTg5NmRkYiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY1MDI5ODE2NSwiZXhwIjoxNjUwNzMwMTY1fQ.QouEl7mv6NxdhnfNAxoKwdkT70OsAaq9ovRhBI6itAU'
+                        token:
+                            'Bearer ' +
+                            JSON.parse(localStorage.getItem('user')).accessToken
                     }
                 });
                 setMovie(res.data);
@@ -46,7 +48,6 @@ const ListItem = ({ index, item }) => {
             >
                 <img
                     src={movie.img}
-                    // "https://tvshowsfinder.com/wp-content/uploads/2021/03/AAAABWCGE90X4h7ce3rUhI4uB8oFJBkdD1s5SACWNjbeJ6a-Ka98x0qbWYwZeRELU6PGCVuoEOQ-epQ71ri9ts9gz_Z1nKXI.jpgr769-1024x576.jpeg"
                     alt=""
                 />
                 {isHovered && (
@@ -71,7 +72,6 @@ const ListItem = ({ index, item }) => {
                 )}
             </div>
         </Link>
-        // </button>
     );
 };
 

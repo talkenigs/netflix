@@ -7,7 +7,7 @@ import { InfoOutlined, PlayArrow } from '@material-ui/icons';
 const Featured = ({ type, setGenre }) => {
     const [content, setContent] = useState({});
     const [showInfo, setShowInfo] = useState(false);
-    console.log(content);
+
     const handleClick = () => {
         showInfo ? setShowInfo(false) : setShowInfo(true);
     };
@@ -17,7 +17,9 @@ const Featured = ({ type, setGenre }) => {
             try {
                 const res = await axios.get(`/movies/random?type=${type}`, {
                     headers: {
-                        token: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNTk4OGU0ODQ1NjFjMDQ0ZTg5NmRkYiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY1MDA0MzI1NiwiZXhwIjoxNjUwNDc1MjU2fQ.dWKv_ASlD0aEd615aQfJ6PZHU50ZrMP7NgNTaldXKkA'
+                        token:
+                            'Bearer ' +
+                            JSON.parse(localStorage.getItem('user')).accessToken
                     }
                 });
                 setContent(res.data[0]);

@@ -8,10 +8,20 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import './listItem.scss';
+import YouTube from 'react-youtube';
+
 
 const ListItem = ({ index, item }) => {
     const [isHovered, setIsHovered] = useState(false);
     const [movie, setMovie] = useState({});
+
+    const opts = {
+        height: '140',
+        width: '300',
+        playerVars: {
+          autoplay: 1,
+        },
+    }
 
     // const trailer =
     // 'https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c0fd273d2c6d9a064f3ae35579b2bbdf&profile_id=139&oauth2_token_id=57447761';
@@ -52,7 +62,7 @@ const ListItem = ({ index, item }) => {
                 />
                 {isHovered && (
                     <>
-                        <video src={movie.trailer} autoPlay={true} loop></video>
+                        <YouTube videoId={movie.trailer} opts={opts} className='trailer'/>
                         <div className="itemInfo">
                             <div className="icons">
                                 <PlayArrow className="icon" />

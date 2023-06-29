@@ -1,0 +1,31 @@
+[debug] [2023-06-29T14:55:33.800Z] ----------------------------------------------------------------------
+[debug] [2023-06-29T14:55:33.801Z] Command:       /opt/homebrew/Cellar/node/20.0.0/bin/node /opt/homebrew/bin/firebase init
+[debug] [2023-06-29T14:55:33.802Z] CLI Version:   3.16.0
+[debug] [2023-06-29T14:55:33.802Z] Platform:      darwin
+[debug] [2023-06-29T14:55:33.802Z] Node Version:  v20.0.0
+[debug] [2023-06-29T14:55:33.802Z] Time:          Thu Jun 29 2023 17:55:33 GMT+0300 (Israel Daylight Time)
+[debug] [2023-06-29T14:55:33.802Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-06-29T14:55:33.805Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
+[debug] [2023-06-29T14:55:33.805Z] > authorizing via signed-in user
+[info] 
+     🔥🔥🔥🔥🔥🔥🔥🔥 🔥🔥🔥🔥 🔥🔥🔥🔥🔥🔥🔥🔥  🔥🔥🔥🔥🔥🔥🔥🔥 🔥🔥🔥🔥🔥🔥🔥🔥     🔥🔥🔥     🔥🔥🔥🔥🔥🔥  🔥🔥🔥🔥🔥🔥🔥🔥
+     🔥🔥        🔥🔥  🔥🔥     🔥🔥 🔥🔥       🔥🔥     🔥🔥  🔥🔥   🔥🔥  🔥🔥       🔥🔥
+     🔥🔥🔥🔥🔥🔥    🔥🔥  🔥🔥🔥🔥🔥🔥🔥🔥  🔥🔥🔥🔥🔥🔥   🔥🔥🔥🔥🔥🔥🔥🔥  🔥🔥🔥🔥🔥🔥🔥🔥🔥  🔥🔥🔥🔥🔥🔥  🔥🔥🔥🔥🔥🔥
+     🔥🔥        🔥🔥  🔥🔥    🔥🔥  🔥🔥       🔥🔥     🔥🔥 🔥🔥     🔥🔥       🔥🔥 🔥🔥
+     🔥🔥       🔥🔥🔥🔥 🔥🔥     🔥🔥 🔥🔥🔥🔥🔥🔥🔥🔥 🔥🔥🔥🔥🔥🔥🔥🔥  🔥🔥     🔥🔥  🔥🔥🔥🔥🔥🔥  🔥🔥🔥🔥🔥🔥🔥🔥
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/talkenigs/Desktop/Freelance/Netflix/netflix/api
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-06-29T14:55:35.812Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects  
+  
+ Thu Jun 29 2023 17:55:35 GMT+0300 (Israel Daylight Time)

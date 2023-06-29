@@ -19,7 +19,9 @@ const Home = ({ type }) => {
                     }`,
                     {
                         headers: {
-                            token: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNTk4OGU0ODQ1NjFjMDQ0ZTg5NmRkYiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY1MDA0MzI1NiwiZXhwIjoxNjUwNDc1MjU2fQ.dWKv_ASlD0aEd615aQfJ6PZHU50ZrMP7NgNTaldXKkA'
+                            token:
+                                'Bearer ' +
+                                JSON.parse(localStorage.getItem('user')).accessToken
                         }
                     }
                 );

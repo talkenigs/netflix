@@ -18,6 +18,8 @@ async function main() {
         .catch((err) => console.log(err));
 }
 
+app.use(express.static('build'));
+
 app.use(express.json());
 app.use('/api/auth', authRoute);
 app.use('/api/users', userRoute);
